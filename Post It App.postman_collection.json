@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "b251981e-f5ae-4e14-b32c-d6556e98f1c3",
+		"name": "Post It App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17554745",
+		"_collection_link": "https://sbicrypto.postman.co/workspace/New-Team-Workspace~2299e0c9-18f7-451a-8722-c7e71c01b469/collection/17554745-b251981e-f5ae-4e14-b32c-d6556e98f1c3?action=share&source=collection_link&creator=17554745"
+	},
+	"item": [
+		{
+			"name": "Create Post It Note",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"My first post it note\",\r\n    \"content\": \"I want to pass my AIM subject!!\",\r\n    \"category\": \"school-note\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/notes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  Post It Note",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/notes/cc5ff528-5352-4ba3-9b75-962dc5dacf2f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes",
+						"cc5ff528-5352-4ba3-9b75-962dc5dacf2f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health Checker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/healthchecker",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"healthchecker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post It Note",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Updating my first note! ✅✅👇👇\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/notes/77a9ac3c-7e3b-40c1-b2d4-30729c931d3d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes",
+						"77a9ac3c-7e3b-40c1-b2d4-30729c931d3d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post It Note",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/notes/04aae95f-de90-4a39-9610-83b84485a042",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes",
+						"04aae95f-de90-4a39-9610-83b84485a042"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Post It Notes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/notes?page=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
